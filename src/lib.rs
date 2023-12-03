@@ -2,6 +2,7 @@ use std::collections::HashMap;
 use std::time::Instant;
 
 mod day1;
+mod day2;
 mod input;
 
 pub trait Solution {
@@ -24,8 +25,11 @@ pub trait Solution {
 }
 
 pub fn solutions() -> HashMap<u8, Box<dyn Solution>> {
-    [Box::new(day1::Day1) as Box<dyn Solution>]
-        .into_iter()
-        .map(|solution| (solution.day(), solution))
-        .collect()
+    [
+        Box::new(day1::Day1) as Box<dyn Solution>,
+        Box::new(day2::Day2),
+    ]
+    .into_iter()
+    .map(|solution| (solution.day(), solution))
+    .collect()
 }
