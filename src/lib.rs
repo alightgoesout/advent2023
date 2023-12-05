@@ -5,6 +5,7 @@ mod day1;
 mod day2;
 mod day3;
 mod day4;
+mod day5;
 mod input;
 
 pub trait Solution {
@@ -32,6 +33,7 @@ pub fn solutions() -> HashMap<u8, Box<dyn Solution>> {
         Box::new(day2::Day2),
         Box::new(day3::Day3),
         Box::new(day4::Day4),
+        Box::new(day5::Day5),
     ]
     .into_iter()
     .map(|solution| (solution.day(), solution))
